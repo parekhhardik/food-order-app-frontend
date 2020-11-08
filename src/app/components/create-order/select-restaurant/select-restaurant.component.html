@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <form [formGroup]="restaurantForm">
+    <div class="card-body">
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label"
+          >Please Select a Restaurant</label
+        >
+        <div class="col-sm-8">
+          <select
+            class="form-control"
+            formControlName="restaurant"
+            [ngClass]="{ 'is-invalid': submitted && f.restaurant.errors }"
+          >
+            <option value="" disabled>---Select---</option>
+            <option
+              *ngFor="let restaurantItem of restaurantData"
+              [value]="restaurantItem.restaurantName"
+            >
+              {{ restaurantItem.restaurantName }}
+            </option>
+          </select>
+          <div
+            *ngIf="submitted && f.restaurant.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f.restaurant.errors.required">
+              {{ restaurantFormErrors.RESTAURANT_REQUERED }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <button class="btn btn-warning" (click)="goPrevious()">Previous</button>
+      <button
+        type="button"
+        (click)="onNextStep()"
+        class="btn btn-primary btnClass"
+      >
+        Next
+      </button>
+    </div>
+  </form>
+</div>

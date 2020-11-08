@@ -1,0 +1,17 @@
+@import "../../../../styles.scss";
+
+.table {
+  width: 100%;
+  .column {
+    width: 40%;
+  }
+  .card-column {
+    width: 40%;
+    border: 1px solid black;
+    span {
+      display: block;
+      width: 100%;
+      float: left;
+    }
+  }
+}

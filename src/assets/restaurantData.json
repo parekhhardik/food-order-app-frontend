@@ -1,0 +1,96 @@
+{
+  "success": true,
+  "message": "Restaurant data fetched successfully",
+  "data": [
+    {
+      "id": 1,
+      "restaurantName": "R Kitchen",
+      "dishes": [
+        {
+          "id": 1,
+          "dishName": "Juniper Bar"
+        },
+        {
+          "id": 2,
+          "dishName": "The Hong Kong Club"
+        },
+        {
+          "id": 3,
+          "dishName": "Curry Mahal"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "restaurantName": "Rajwadu",
+      "dishes": [
+        {
+          "id": 4,
+          "dishName": "Daily Grill"
+        },
+        {
+          "id": 5,
+          "dishName": "Aloo Gobi"
+        },
+        {
+          "id": 6,
+          "dishName": "Gajar Ka Halwa"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "restaurantName": "Agashiye",
+      "dishes": [
+        {
+          "id": 7,
+          "dishName": "Waffle"
+        },
+        {
+          "id": 8,
+          "dishName": "Papdi Chaat"
+        },
+        {
+          "id": 9,
+          "dishName": "Samosa"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "restaurantName": "Kuro - The Asian Bistro",
+      "dishes": [
+        {
+          "id": 10,
+          "dishName": "Paratha"
+        },
+        {
+          "id": 11,
+          "dishName": "Masala Dosa"
+        },
+        {
+          "id": 12,
+          "dishName": "Raita"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "restaurantName": "@Mango",
+      "dishes": [
+        {
+          "id": 13,
+          "dishName": "Dal"
+        },
+        {
+          "id": 14,
+          "dishName": "Saag Paneer"
+        },
+        {
+          "id": 15,
+          "dishName": "Rogan Josh"
+        }
+      ]
+    }
+  ]
+}

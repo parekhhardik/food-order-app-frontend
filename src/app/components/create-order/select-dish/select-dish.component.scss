@@ -1,0 +1,17 @@
+@import "../../../../styles.scss";
+
+.action-button {
+  margin-bottom: 20px;
+  .add-dish {
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
+
+table {
+  margin: 20px;
+  // margin-left: 300px;
+  th {
+    border-bottom: 1px solid black;
+  }
+}

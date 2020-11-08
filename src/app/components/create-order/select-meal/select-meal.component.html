@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <form [formGroup]="mealForm">
+    <div class="card-body">
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Please Select a meal</label>
+        <div class="col-sm-8">
+          <select
+            class="form-control"
+            formControlName="meal"
+            [ngClass]="{ 'is-invalid': submitted && f.meal.errors }"
+          >
+            <option value="" disabled>---Select---</option>
+            <option *ngFor="let meal of mealData" [value]="meal.name">
+              {{ meal.name }}
+            </option>
+          </select>
+          <div *ngIf="submitted && f.meal.errors" class="invalid-feedback">
+            <div *ngIf="f.meal.errors.required">
+              {{ mealFormErrors.MEAL_REQUERED }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label"
+          >Please Enter Number of people</label
+        >
+        <div class="col-sm-8">
+          <input
+            class="form-control"
+            type="number"
+            formControlName="member"
+            [ngClass]="{ 'is-invalid': submitted && f.member.errors }"
+          />
+          <div *ngIf="submitted && f.member.errors" class="invalid-feedback">
+            <div *ngIf="f.member.errors.required">
+              {{ mealFormErrors.PEOPLE_REQUIRED }}
+            </div>
+          </div>
+          <div *ngIf="submitted && f.member.errors" class="invalid-feedback">
+            <div *ngIf="f.member.errors.min || f.member.errors.max">
+              {{ mealFormErrors.PEOPLE_VALID }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary" (click)="onNextStep()">
+        Next
+      </button>
+    </div>
+  </form>
+</div>

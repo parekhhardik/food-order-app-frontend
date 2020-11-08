@@ -1,0 +1,67 @@
+<div class="container-fluid centered main-box">
+  <ul
+    ngbNav
+    #nav="ngbNav"
+    [(activeId)]="activeId"
+    (navChange)="onNavChange($event)"
+    class="nav-tabs"
+  >
+    <li ngbNavItem [ngbNavItem]="1">
+      <a ngbNavLink>
+        <span class="custom-badge">1</span>
+        Select Meal
+      </a>
+      <ng-template ngbNavContent>
+        <app-select-meal
+          [formData]="formData"
+          (data)="data($event)"
+          (countChange)="onCountChanged($event)"
+        >
+        </app-select-meal>
+      </ng-template>
+    </li>
+    <li ngbNavItem [ngbNavItem]="2">
+      <a ngbNavLink>
+        <span class="custom-badge">2</span>
+        Select Restaurant
+      </a>
+      <ng-template ngbNavContent>
+        <app-select-restaurant
+          [formData]="formData"
+          (data)="data($event)"
+          (countChange)="onCountChanged($event)"
+        >
+        </app-select-restaurant>
+      </ng-template>
+    </li>
+    <li ngbNavItem [ngbNavItem]="3">
+      <a ngbNavLink>
+        <span class="custom-badge">3</span>
+        Select Dish
+      </a>
+      <ng-template ngbNavContent>
+        <app-select-dish
+          [formData]="formData"
+          (data)="data($event)"
+          (countChange)="onCountChanged($event)"
+        >
+        </app-select-dish>
+      </ng-template>
+    </li>
+    <li ngbNavItem [ngbNavItem]="4">
+      <a ngbNavLink>
+        <span class="custom-badge">4</span>
+        Review
+      </a>
+      <ng-template ngbNavContent>
+        <app-review
+          [formData]="formData"
+          (data)="data($event)"
+          (countChange)="onCountChanged($event)"
+        >
+        </app-review>
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav"></div>
+</div>

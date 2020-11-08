@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="card-body">
+    <table id="allData" class="table" #allData>
+      <tr valign="top">
+        <td class="column">Meal</td>
+
+        <td class="column">
+          {{ formData.tab1.meal }}
+        </td>
+      </tr>
+
+      <tr valign="top">
+        <td class="column">No. of People</td>
+
+        <td class="column">
+          {{ formData.tab1.member }}
+        </td>
+      </tr>
+
+      <tr valign="top">
+        <td class="column">Restaurant</td>
+
+        <td class="column">
+          {{ formData.tab2.restaurant }}
+        </td>
+      </tr>
+
+      <tr valign="top">
+        <td class="column">Dishes</td>
+
+        <td class="card-column">
+          <table class="table">
+            <tr>
+              <th>Dish Name</th>
+              <th>No. Of Items</th>
+            </tr>
+            <tr *ngFor="let item of formData.tab3">
+              <td>{{ item.dish }}</td>
+              <td>{{ item.servings }}</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card-footer">
+    <button class="btn btn-warning" (click)="goPrevious()">Previous</button>
+    <button class="btn btn-success btnClass" (click)="finish()">Finish</button>
+  </div>
+</div>
