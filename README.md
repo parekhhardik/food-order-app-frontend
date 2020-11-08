@@ -9,6 +9,11 @@ npm install
 ng serve
 ```
 
+### Live link
+
+Deployed this angular application into netlify platform.
+**Here is URL:** [Food order App](https://food-order-app.netlify.app/)
+
 ### Text editor settings
 
 Please make sure your text editor is configured properly before you start contributing.
